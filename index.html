@@ -9,47 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Instrument+Sans:wght@400;600&display=swap" rel="stylesheet">
 <!-- ADSENSE: paste the script Google gives you here (inside <head>) -->
-<style>
-:root{--paper:#F3F6F8;--ink:#12212E;--teal:#0B5F73;--amber:#F5B700;--line:#CBD5DC;--muted:#4A5B67}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 "Instrument Sans",system-ui,sans-serif}
-a{color:var(--teal)}
-:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
-.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
-h1,h2,h3,.brand{font-family:"Bricolage Grotesque",system-ui,sans-serif;letter-spacing:-.02em}
-header{border-bottom:1px solid var(--line)}
-nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0;gap:16px;flex-wrap:wrap}
-.brand{font-weight:800;font-size:1.3rem;color:var(--ink);text-decoration:none}
-nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0}
-nav ul a{color:var(--ink);text-decoration:none;font-weight:600}
-.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;padding:64px 0;align-items:center}
-h1{font-size:clamp(2.2rem,5.5vw,3.8rem);line-height:1.05;margin:0 0 16px;font-weight:800}
-.hero p{max-width:46ch;color:var(--muted);margin:0 0 28px}
-.btn{display:inline-block;background:var(--teal);color:#fff;padding:12px 22px;border-radius:6px;font:600 1rem "Instrument Sans",sans-serif;text-decoration:none;border:2px solid var(--teal);cursor:pointer}
-.btn.alt{background:transparent;color:var(--ink);border-color:var(--ink);margin-left:8px}
-.chat{background:#fff;border:2px solid var(--ink);border-radius:14px;padding:16px;min-height:310px;display:flex;flex-direction:column;gap:10px}
-.msg{max-width:86%;padding:10px 14px;border-radius:12px;font-size:.95rem;animation:in .3s both}
-.msg.c{background:#E3EAEE;align-self:flex-start}
-.msg.a{background:var(--teal);color:#fff;align-self:flex-end}
-@keyframes in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
-section{padding:56px 0;border-top:1px solid var(--line)}
-h2{font-size:clamp(1.7rem,3.5vw,2.3rem);margin:0 0 8px}
-.sub{color:var(--muted);margin:0 0 28px;max-width:60ch}
-.agent{display:grid;grid-template-columns:1fr 2fr auto;gap:20px;align-items:center;padding:20px 0;border-top:1px solid var(--line)}
-.agent h3{margin:0;font-size:1.2rem}
-.agent p{margin:0;color:var(--muted)}
-.price{font-weight:600;white-space:nowrap}
-ol.steps{padding-left:1.2em;max-width:62ch}
-ol.steps li{margin-bottom:10px}
-form{display:grid;gap:14px;max-width:520px}
-label{font-weight:600;display:grid;gap:6px}
-input,textarea{font:inherit;padding:10px 12px;border:2px solid var(--line);border-radius:6px;background:#fff;color:var(--ink)}
-textarea{min-height:120px}
-footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:.95rem}
-@media(max-width:760px){.hero{grid-template-columns:1fr;padding:40px 0}.agent{grid-template-columns:1fr;gap:8px}}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto}}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header><div class="wrap"><nav>

@@ -1,0 +1,82 @@
+/* Az'Ha AI Solutions - main stylesheet */
+:root{
+  --paper:#F3F6F8; --surface:#fff; --tint:#E6EEF2;
+  --ink:#12212E; --muted:#4A5B67; --line:#CBD5DC;
+  --teal:#0B5F73; --on-teal:#fff; --amber:#F5B700;
+  --radius:10px;
+}
+@media (prefers-color-scheme:dark){
+  :root{--paper:#0D1822;--surface:#13242F;--tint:#1A2E3B;--ink:#EAF1F5;--muted:#9DB0BD;--line:#26394A;--teal:#4CC3DB;--on-teal:#08222B}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 "Instrument Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--teal)}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+h1,h2,h3,.brand{font-family:"Bricolage Grotesque",system-ui,sans-serif;letter-spacing:-.02em;text-wrap:balance}
+
+/* Header */
+header{position:sticky;top:0;z-index:10;border-bottom:1px solid var(--line);background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(10px)}
+nav{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:14px 0}
+.brand{font-weight:800;font-size:1.35rem;color:var(--ink);text-decoration:none}
+nav ul{display:flex;gap:24px;list-style:none;margin:0;padding:0}
+nav ul a{color:var(--ink);text-decoration:none;font-weight:600}
+nav ul a:hover{text-decoration:underline;text-decoration-color:var(--amber);text-decoration-thickness:3px;text-underline-offset:7px}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;padding:80px 0}
+h1{font-size:clamp(2.3rem,5.5vw,4rem);line-height:1.04;font-weight:800;margin:0 0 18px}
+.hero p{max-width:46ch;margin:0 0 30px;color:var(--muted);font-size:1.1rem}
+
+/* Buttons */
+.btn{display:inline-block;padding:13px 24px;border:2px solid var(--teal);border-radius:var(--radius);background:var(--teal);color:var(--on-teal);font:600 1rem "Instrument Sans",system-ui,sans-serif;text-decoration:none;cursor:pointer;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 4px 0 var(--ink)}
+.btn:active{transform:none;box-shadow:none}
+.btn.alt{margin-left:8px;background:transparent;border-color:var(--ink);color:var(--ink)}
+
+/* Chat demo: the one bold element on the page */
+.chat{display:flex;flex-direction:column;gap:10px;min-height:330px;padding:0 16px 16px;background:var(--surface);border:2px solid var(--ink);border-radius:16px;box-shadow:10px 10px 0 var(--amber)}
+.chat::before{content:"Az'Ha Support Agent";margin:0 -16px 6px;padding:12px 16px;border-bottom:2px solid var(--ink);font:700 .95rem "Bricolage Grotesque",system-ui,sans-serif}
+.msg{max-width:86%;padding:10px 14px;border-radius:14px;font-size:.95rem;animation:in .3s both}
+.msg.c{align-self:flex-start;background:var(--tint);border-bottom-left-radius:4px}
+.msg.a{align-self:flex-end;background:var(--teal);color:var(--on-teal);border-bottom-right-radius:4px}
+@keyframes in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* Sections */
+section{padding:64px 0;border-top:1px solid var(--line);scroll-margin-top:60px}
+h2{font-size:clamp(1.8rem,3.5vw,2.5rem);line-height:1.1;margin:0 0 14px}
+h2::after{content:"";display:block;width:52px;height:4px;margin-top:12px;background:var(--amber);border-radius:2px}
+.sub{max-width:60ch;margin:0 0 32px;color:var(--muted)}
+
+/* Agents list */
+.agent{display:grid;grid-template-columns:1fr 2fr auto;gap:20px;align-items:center;margin:0 -14px;padding:22px 14px;border-top:1px solid var(--line);border-radius:var(--radius);transition:background .2s}
+.agent:hover{background:var(--tint)}
+.agent h3{margin:0;font-size:1.2rem}
+.agent p{margin:0;color:var(--muted)}
+.price{margin-right:10px;font-weight:600;white-space:nowrap}
+
+/* Steps */
+ol.steps{max-width:62ch;padding-left:1.3em}
+ol.steps li{margin-bottom:12px;padding-left:6px}
+ol.steps li::marker{color:var(--teal);font-weight:800}
+
+/* Form */
+form{display:grid;gap:16px;max-width:520px}
+label{display:grid;gap:6px;font-weight:600}
+input,textarea{padding:12px 14px;border:2px solid var(--line);border-radius:var(--radius);background:var(--surface);color:var(--ink);font:inherit;transition:border-color .15s}
+input:focus,textarea:focus{outline:none;border-color:var(--teal)}
+textarea{min-height:130px;resize:vertical}
+
+/* Footer */
+footer{padding:32px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.95rem}
+
+/* Mobile */
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr;gap:36px;padding:44px 0}
+  .chat{box-shadow:6px 6px 0 var(--amber)}
+  .agent{grid-template-columns:1fr;gap:8px}
+  nav ul{gap:16px}
+  .btn.alt{margin:10px 0 0}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto}}
